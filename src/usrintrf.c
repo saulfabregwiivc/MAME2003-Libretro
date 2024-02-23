@@ -3148,11 +3148,11 @@ static int setup_menu(struct mame_bitmap *bitmap, int selected)
 			case UI_CHEAT:
 				res = cheat_menu(bitmap, sel >> SEL_BITS);
 				break;
-/*
 			case UI_MEMCARD:
+/*
 				res = memcard_menu(bitmap, sel >> SEL_BITS);
-				break;
 */
+				break;
 
 		}
 
