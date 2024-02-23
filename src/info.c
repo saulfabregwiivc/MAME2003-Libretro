@@ -884,6 +884,7 @@ void print_mame_xml()
 		print_game_info(xml_dat, drivers[driver_index]);
 
 	/* print the resources (only if linked) */
+/*
 	PRINT_RESOURCE(neogeo);
 	PRINT_RESOURCE(cvs);
 	PRINT_RESOURCE(decocass);
@@ -900,6 +901,7 @@ void print_mame_xml()
 	PRINT_RESOURCE(tps);
 	PRINT_RESOURCE(taitofx1);
 	PRINT_RESOURCE(acpsx);
+*/
 
 	fprintf(xml_dat, "</" XML_ROOT ">\n");
     fclose(xml_dat);

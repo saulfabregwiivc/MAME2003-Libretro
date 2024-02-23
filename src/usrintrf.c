@@ -38,7 +38,9 @@ extern unsigned int dispensed_tickets;
 extern unsigned int coins[COIN_COUNTERS];
 extern unsigned int coinlockedout[COIN_COUNTERS];
 
-/* MARTINEZ.F 990207 Memory Card */
+/*
+// MARTINEZ.F 990207 Memory Card
+// reserved only for NeoGeo driver
 int 		memcard_menu(struct mame_bitmap *bitmap, int);
 extern int	mcd_action;
 extern int	mcd_number;
@@ -50,7 +52,8 @@ extern int neogeo_memcard_load(int);
 extern void neogeo_memcard_save(void);
 extern void neogeo_memcard_eject(void);
 extern int neogeo_memcard_create(int);
-/* MARTINEZ.F 990207 Memory Card End */
+// MARTINEZ.F 990207 Memory Card End
+*/
 
 
 
@@ -2882,6 +2885,7 @@ static int displayhistory (struct mame_bitmap *bitmap, int selected)
 
 }
 
+/*
 int memcard_menu(struct mame_bitmap *bitmap, int selection)
 {
 	int sel;
@@ -2995,6 +2999,7 @@ int memcard_menu(struct mame_bitmap *bitmap, int selection)
 
 	return sel + 1;
 }
+*/
 
 
 enum { UI_SWITCH = 0,UI_DEFCODE,UI_CODE,UI_FLUSH_CURRENT_CFG, UI_FLUSH_ALL_CFG, UI_ANALOG,UI_CALIBRATE,
@@ -3077,10 +3082,12 @@ void setup_menu_init(void)
 
 	menu_item[menu_total] = ui_getstring (UI_cheat); menu_action[menu_total++] = UI_CHEAT;
 
+/*
 	if (options.content_flags[CONTENT_NEOGEO])
 	{
 		menu_item[menu_total] = ui_getstring (UI_memorycard); menu_action[menu_total++] = UI_MEMCARD;
 	}
+*/
 
 #if !defined(WIIU) && !defined(GEKKO) && !defined(__SWITCH__) && !defined(PSP) && !defined(VITA) && !defined(__GCW0__) && !defined(__EMSCRIPTEN__) && !defined(_XBOX)
     /* don't offer to generate_xml_dat on consoles where it can't be used */

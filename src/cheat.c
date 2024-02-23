@@ -7715,14 +7715,16 @@ static UINT8 DefaultEnableRegion(SearchRegion * region, SearchInfo * info)
 				return 1;
 
 			{
+/*
 				extern struct GameDriver	driver_neogeo;
 
-				/* for neogeo, search bank one*/
+				// for neogeo, search bank one
 				if(	(Machine->gamedrv->clone_of == &driver_neogeo) &&
 					(info->targetType == kRegionType_CPU) &&
 					(info->targetIdx == 0) &&
 					(handler == MWA_BANK1))
 					return 1;
+*/
 			}
 
 
